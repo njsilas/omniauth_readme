@@ -5,5 +5,8 @@
   <h2>Facebook UID: <%= @user.uid %></h2>
   <img src="<%= @user.image %>">
 <% else %>
-  <%= link_to('Log in with Facebook!', '/auth/facebook') %>
+  <%= form_tag('/auth/facebook', method: 'post') do %>
++  <button type='submit'>Login with Developer</button>
++ <% end %>
+
 <% end %> 
